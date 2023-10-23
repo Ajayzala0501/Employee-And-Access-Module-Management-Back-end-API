@@ -31,4 +31,9 @@ public class Modules {
    public Modules(String moduleName){
         this.moduleName  = moduleName;
     }
+
+    public Modules(long id, String moduleName) {
+        this.id = id;
+        this.moduleName = moduleName;
+    }
 }

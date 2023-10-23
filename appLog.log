@@ -1435,4 +1435,793 @@ Caused by: java.io.FileNotFoundException: class path resource [com/practicaltask
  2023-10-23 01:21:21,253 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8082 (http) with context path ''
  2023-10-23 01:21:21,256 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplication [restartedMain] Started EmployeeaccessApplication in 0.715 seconds (process running for 1637.039)
  2023-10-23 01:21:21,258 [INFO] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+ 2023-10-23 07:34:19,915 [WARN] com.zaxxer.hikari.pool.HikariPool [HikariPool-10 housekeeper] HikariPool-10 - Thread starvation or clock leap detected (housekeeper delta=4h52m57s141ms688µs400ns).
+ 2023-10-23 07:48:32,426 [INFO] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+ 2023-10-23 07:48:32,511 [INFO] org.apache.catalina.core.StandardService [Thread-42] Stopping service [Tomcat]
+ 2023-10-23 07:48:32,558 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-42] Closing JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 07:48:32,793 [WARN] org.springframework.beans.factory.support.DisposableBeanAdapter [Thread-42] Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+ 2023-10-23 07:48:32,793 [INFO] com.zaxxer.hikari.HikariDataSource [Thread-42] HikariPool-10 - Shutdown initiated...
+ 2023-10-23 07:48:32,799 [INFO] com.zaxxer.hikari.HikariDataSource [Thread-42] HikariPool-10 - Shutdown completed.
+ 2023-10-23 07:48:33,140 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplication [restartedMain] Starting EmployeeaccessApplication using Java 20.0.2 with PID 55656 (D:\employeeaccess\employeeaccess\target\classes started by hp in D:\employeeaccess\employeeaccess)
+ 2023-10-23 07:48:33,141 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+ 2023-10-23 07:48:33,360 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2023-10-23 07:48:33,380 [ERROR] org.springframework.boot.SpringApplication [restartedMain] Application run failed
+ java.lang.TypeNotPresentException: Type com.practicaltask.employeeaccess.entity.Employee not present
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125) ~[na:na]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138) ~[na:na]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
+	at java.base/sun.reflect.generics.repository.ClassRepository.computeSuperInterfaces(ClassRepository.java:117) ~[na:na]
+	at java.base/sun.reflect.generics.repository.ClassRepository.getSuperInterfaces(ClassRepository.java:95) ~[na:na]
+	at java.base/java.lang.Class.getGenericInterfaces(Class.java:1251) ~[na:na]
+	at org.springframework.core.ResolvableType.getInterfaces(ResolvableType.java:503) ~[spring-core-6.0.13.jar:6.0.13]
+	at org.springframework.core.ResolvableType.as(ResolvableType.java:451) ~[spring-core-6.0.13.jar:6.0.13]
+	at org.springframework.data.util.TypeDiscoverer.getSuperTypeInformation(TypeDiscoverer.java:250) ~[spring-data-commons-3.1.5.jar:3.1.5]
+	at org.springframework.data.util.ClassTypeInformation.getSuperTypeInformation(ClassTypeInformation.java:36) ~[spring-data-commons-3.1.5.jar:3.1.5]
+	at org.springframework.data.util.TypeInformation.getRequiredSuperTypeInformation(TypeInformation.java:327) ~[spring-data-commons-3.1.5.jar:3.1.5]
+	at org.springframework.data.repository.core.support.DefaultRepositoryMetadata.<init>(DefaultRepositoryMetadata.java:55) ~[spring-data-commons-3.1.5.jar:3.1.5]
+	at org.springframework.data.repository.core.support.AbstractRepositoryMetadata.getMetadata(AbstractRepositoryMetadata.java:77) ~[spring-data-commons-3.1.5.jar:3.1.5]
+	at org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.getRepositoryConfigurations(RepositoryConfigurationExtensionSupport.java:91) ~[spring-data-commons-3.1.5.jar:3.1.5]
+	at org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:163) ~[spring-data-commons-3.1.5.jar:3.1.5]
+	at org.springframework.data.repository.config.RepositoryBeanDefinitionRegistrarSupport.registerBeanDefinitions(RepositoryBeanDefinitionRegistrarSupport.java:94) ~[spring-data-commons-3.1.5.jar:3.1.5]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromRegistrars$1(ConfigurationClassBeanDefinitionReader.java:372) ~[spring-context-6.0.13.jar:6.0.13]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:729) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromRegistrars(ConfigurationClassBeanDefinitionReader.java:371) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:148) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:427) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:287) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:344) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:115) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:779) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:597) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-3.1.5.jar:3.1.5]
+	at com.practicaltask.employeeaccess.EmployeeaccessApplication.main(EmployeeaccessApplication.java:19) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.1.5.jar:3.1.5]
+Caused by: java.lang.ClassNotFoundException: com.practicaltask.employeeaccess.entity.Employee
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:496) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:475) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121) ~[spring-boot-devtools-3.1.5.jar:3.1.5]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:496) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:475) ~[na:na]
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114) ~[na:na]
+	... 39 common frames omitted
+2023-10-23 07:48:46,078 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+ 2023-10-23 07:48:46,078 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+ 2023-10-23 07:48:46,082 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplication [restartedMain] Starting EmployeeaccessApplication using Java 20.0.2 with PID 55656 (D:\employeeaccess\employeeaccess\target\classes started by hp in D:\employeeaccess\employeeaccess)
+ 2023-10-23 07:48:46,083 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+ 2023-10-23 07:48:46,287 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2023-10-23 07:48:46,301 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 13 ms. Found 2 JPA repository interfaces.
+ 2023-10-23 07:48:46,612 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8082 (http)
+ 2023-10-23 07:48:46,612 [INFO] org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+ 2023-10-23 07:48:46,612 [INFO] org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.15]
+ 2023-10-23 07:48:46,660 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+ 2023-10-23 07:48:46,661 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 575 ms
+ 2023-10-23 07:48:46,683 [INFO] com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-11 - Starting...
+ 2023-10-23 07:48:46,691 [INFO] com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-11 - Added connection conn131: url=jdbc:h2:mem:employeeaccessdb user=EMPACCESS
+ 2023-10-23 07:48:46,692 [INFO] com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-11 - Start completed.
+ 2023-10-23 07:48:46,692 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-ui'. Database available at 'jdbc:h2:mem:employeeaccessdb'
+ 2023-10-23 07:48:46,740 [INFO] org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2023-10-23 07:48:46,751 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+ 2023-10-23 07:48:46,756 [WARN] org.hibernate.orm.deprecation [restartedMain] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+ 2023-10-23 07:48:46,875 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+ 2023-10-23 07:48:46,891 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 07:48:47,099 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+ 2023-10-23 07:48:47,263 [INFO] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+ 2023-10-23 07:48:47,280 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8082 (http) with context path ''
+ 2023-10-23 07:48:47,283 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplication [restartedMain] Started EmployeeaccessApplication in 1.232 seconds (process running for 24883.07)
+ 2023-10-23 07:48:47,285 [INFO] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+ 2023-10-23 07:52:52,431 [INFO] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+ 2023-10-23 07:52:52,499 [INFO] org.apache.catalina.core.StandardService [Thread-46] Stopping service [Tomcat]
+ 2023-10-23 07:52:52,511 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-46] Closing JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 07:52:52,725 [WARN] org.springframework.beans.factory.support.DisposableBeanAdapter [Thread-46] Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+ 2023-10-23 07:52:52,725 [INFO] com.zaxxer.hikari.HikariDataSource [Thread-46] HikariPool-11 - Shutdown initiated...
+ 2023-10-23 07:52:52,726 [INFO] com.zaxxer.hikari.HikariDataSource [Thread-46] HikariPool-11 - Shutdown completed.
+ 2023-10-23 07:52:52,952 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplication [restartedMain] Starting EmployeeaccessApplication using Java 20.0.2 with PID 55656 (D:\employeeaccess\employeeaccess\target\classes started by hp in D:\employeeaccess\employeeaccess)
+ 2023-10-23 07:52:52,952 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+ 2023-10-23 07:52:53,199 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2023-10-23 07:52:53,215 [ERROR] org.springframework.boot.SpringApplication [restartedMain] Application run failed
+ java.lang.TypeNotPresentException: Type com.practicaltask.employeeaccess.entity.Modules not present
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125) ~[na:na]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138) ~[na:na]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
+	at java.base/sun.reflect.generics.repository.ClassRepository.computeSuperInterfaces(ClassRepository.java:117) ~[na:na]
+	at java.base/sun.reflect.generics.repository.ClassRepository.getSuperInterfaces(ClassRepository.java:95) ~[na:na]
+	at java.base/java.lang.Class.getGenericInterfaces(Class.java:1251) ~[na:na]
+	at org.springframework.core.ResolvableType.getInterfaces(ResolvableType.java:503) ~[spring-core-6.0.13.jar:6.0.13]
+	at org.springframework.core.ResolvableType.as(ResolvableType.java:451) ~[spring-core-6.0.13.jar:6.0.13]
+	at org.springframework.data.util.TypeDiscoverer.getSuperTypeInformation(TypeDiscoverer.java:250) ~[spring-data-commons-3.1.5.jar:3.1.5]
+	at org.springframework.data.util.ClassTypeInformation.getSuperTypeInformation(ClassTypeInformation.java:36) ~[spring-data-commons-3.1.5.jar:3.1.5]
+	at org.springframework.data.util.TypeInformation.getRequiredSuperTypeInformation(TypeInformation.java:327) ~[spring-data-commons-3.1.5.jar:3.1.5]
+	at org.springframework.data.repository.core.support.DefaultRepositoryMetadata.<init>(DefaultRepositoryMetadata.java:55) ~[spring-data-commons-3.1.5.jar:3.1.5]
+	at org.springframework.data.repository.core.support.AbstractRepositoryMetadata.getMetadata(AbstractRepositoryMetadata.java:77) ~[spring-data-commons-3.1.5.jar:3.1.5]
+	at org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.getRepositoryConfigurations(RepositoryConfigurationExtensionSupport.java:91) ~[spring-data-commons-3.1.5.jar:3.1.5]
+	at org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:163) ~[spring-data-commons-3.1.5.jar:3.1.5]
+	at org.springframework.data.repository.config.RepositoryBeanDefinitionRegistrarSupport.registerBeanDefinitions(RepositoryBeanDefinitionRegistrarSupport.java:94) ~[spring-data-commons-3.1.5.jar:3.1.5]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromRegistrars$1(ConfigurationClassBeanDefinitionReader.java:372) ~[spring-context-6.0.13.jar:6.0.13]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:729) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromRegistrars(ConfigurationClassBeanDefinitionReader.java:371) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:148) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:427) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:287) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:344) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:115) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:779) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:597) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-3.1.5.jar:3.1.5]
+	at com.practicaltask.employeeaccess.EmployeeaccessApplication.main(EmployeeaccessApplication.java:19) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.1.5.jar:3.1.5]
+Caused by: java.lang.ClassNotFoundException: com.practicaltask.employeeaccess.entity.Modules
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:496) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:475) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121) ~[spring-boot-devtools-3.1.5.jar:3.1.5]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:496) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:475) ~[na:na]
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114) ~[na:na]
+	... 39 common frames omitted
+2023-10-23 07:53:04,966 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+ 2023-10-23 07:53:04,966 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+ 2023-10-23 07:53:04,970 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplication [restartedMain] Starting EmployeeaccessApplication using Java 20.0.2 with PID 55656 (D:\employeeaccess\employeeaccess\target\classes started by hp in D:\employeeaccess\employeeaccess)
+ 2023-10-23 07:53:04,971 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+ 2023-10-23 07:53:05,138 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2023-10-23 07:53:05,149 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 10 ms. Found 2 JPA repository interfaces.
+ 2023-10-23 07:53:05,305 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8082 (http)
+ 2023-10-23 07:53:05,305 [INFO] org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+ 2023-10-23 07:53:05,305 [INFO] org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.15]
+ 2023-10-23 07:53:05,334 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+ 2023-10-23 07:53:05,334 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 361 ms
+ 2023-10-23 07:53:05,348 [INFO] com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-12 - Starting...
+ 2023-10-23 07:53:05,351 [INFO] com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-12 - Added connection conn141: url=jdbc:h2:mem:employeeaccessdb user=EMPACCESS
+ 2023-10-23 07:53:05,351 [INFO] com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-12 - Start completed.
+ 2023-10-23 07:53:05,351 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-ui'. Database available at 'jdbc:h2:mem:employeeaccessdb'
+ 2023-10-23 07:53:05,375 [INFO] org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2023-10-23 07:53:05,383 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+ 2023-10-23 07:53:05,384 [WARN] org.hibernate.orm.deprecation [restartedMain] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+ 2023-10-23 07:53:05,443 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+ 2023-10-23 07:53:05,453 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 07:53:05,563 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+ 2023-10-23 07:53:05,663 [INFO] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+ 2023-10-23 07:53:05,688 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8082 (http) with context path ''
+ 2023-10-23 07:53:05,693 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplication [restartedMain] Started EmployeeaccessApplication in 0.743 seconds (process running for 25141.479)
+ 2023-10-23 07:53:05,694 [INFO] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+ 2023-10-23 07:53:26,483 [INFO] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+ 2023-10-23 07:53:26,521 [INFO] org.apache.catalina.core.StandardService [Thread-53] Stopping service [Tomcat]
+ 2023-10-23 07:53:26,526 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-53] Closing JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 07:53:26,733 [WARN] org.springframework.beans.factory.support.DisposableBeanAdapter [Thread-53] Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+ 2023-10-23 07:53:26,734 [INFO] com.zaxxer.hikari.HikariDataSource [Thread-53] HikariPool-12 - Shutdown initiated...
+ 2023-10-23 07:53:26,735 [INFO] com.zaxxer.hikari.HikariDataSource [Thread-53] HikariPool-12 - Shutdown completed.
+ 2023-10-23 07:53:26,870 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplication [restartedMain] Starting EmployeeaccessApplication using Java 20.0.2 with PID 55656 (D:\employeeaccess\employeeaccess\target\classes started by hp in D:\employeeaccess\employeeaccess)
+ 2023-10-23 07:53:26,871 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+ 2023-10-23 07:53:27,038 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2023-10-23 07:53:27,051 [ERROR] org.springframework.boot.SpringApplication [restartedMain] Application run failed
+ java.lang.TypeNotPresentException: Type com.practicaltask.employeeaccess.entity.Modules not present
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125) ~[na:na]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138) ~[na:na]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
+	at java.base/sun.reflect.generics.repository.ClassRepository.computeSuperInterfaces(ClassRepository.java:117) ~[na:na]
+	at java.base/sun.reflect.generics.repository.ClassRepository.getSuperInterfaces(ClassRepository.java:95) ~[na:na]
+	at java.base/java.lang.Class.getGenericInterfaces(Class.java:1251) ~[na:na]
+	at org.springframework.core.ResolvableType.getInterfaces(ResolvableType.java:503) ~[spring-core-6.0.13.jar:6.0.13]
+	at org.springframework.core.ResolvableType.as(ResolvableType.java:451) ~[spring-core-6.0.13.jar:6.0.13]
+	at org.springframework.data.util.TypeDiscoverer.getSuperTypeInformation(TypeDiscoverer.java:250) ~[spring-data-commons-3.1.5.jar:3.1.5]
+	at org.springframework.data.util.ClassTypeInformation.getSuperTypeInformation(ClassTypeInformation.java:36) ~[spring-data-commons-3.1.5.jar:3.1.5]
+	at org.springframework.data.util.TypeInformation.getRequiredSuperTypeInformation(TypeInformation.java:327) ~[spring-data-commons-3.1.5.jar:3.1.5]
+	at org.springframework.data.repository.core.support.DefaultRepositoryMetadata.<init>(DefaultRepositoryMetadata.java:55) ~[spring-data-commons-3.1.5.jar:3.1.5]
+	at org.springframework.data.repository.core.support.AbstractRepositoryMetadata.getMetadata(AbstractRepositoryMetadata.java:77) ~[spring-data-commons-3.1.5.jar:3.1.5]
+	at org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.getRepositoryConfigurations(RepositoryConfigurationExtensionSupport.java:91) ~[spring-data-commons-3.1.5.jar:3.1.5]
+	at org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:163) ~[spring-data-commons-3.1.5.jar:3.1.5]
+	at org.springframework.data.repository.config.RepositoryBeanDefinitionRegistrarSupport.registerBeanDefinitions(RepositoryBeanDefinitionRegistrarSupport.java:94) ~[spring-data-commons-3.1.5.jar:3.1.5]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromRegistrars$1(ConfigurationClassBeanDefinitionReader.java:372) ~[spring-context-6.0.13.jar:6.0.13]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:729) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromRegistrars(ConfigurationClassBeanDefinitionReader.java:371) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:148) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:427) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:287) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:344) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:115) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:779) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:597) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-3.1.5.jar:3.1.5]
+	at com.practicaltask.employeeaccess.EmployeeaccessApplication.main(EmployeeaccessApplication.java:19) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.1.5.jar:3.1.5]
+Caused by: java.lang.ClassNotFoundException: com.practicaltask.employeeaccess.entity.Modules
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:496) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:475) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121) ~[spring-boot-devtools-3.1.5.jar:3.1.5]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:496) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:475) ~[na:na]
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114) ~[na:na]
+	... 39 common frames omitted
+2023-10-23 07:53:35,646 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+ 2023-10-23 07:53:35,647 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+ 2023-10-23 07:53:35,651 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplication [restartedMain] Starting EmployeeaccessApplication using Java 20.0.2 with PID 55656 (D:\employeeaccess\employeeaccess\target\classes started by hp in D:\employeeaccess\employeeaccess)
+ 2023-10-23 07:53:35,652 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+ 2023-10-23 07:53:35,813 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2023-10-23 07:53:35,822 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 9 ms. Found 2 JPA repository interfaces.
+ 2023-10-23 07:53:35,972 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8082 (http)
+ 2023-10-23 07:53:35,972 [INFO] org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+ 2023-10-23 07:53:35,973 [INFO] org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.15]
+ 2023-10-23 07:53:36,002 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+ 2023-10-23 07:53:36,002 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 348 ms
+ 2023-10-23 07:53:36,016 [INFO] com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-13 - Starting...
+ 2023-10-23 07:53:36,019 [INFO] com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-13 - Added connection conn151: url=jdbc:h2:mem:employeeaccessdb user=EMPACCESS
+ 2023-10-23 07:53:36,019 [INFO] com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-13 - Start completed.
+ 2023-10-23 07:53:36,020 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-ui'. Database available at 'jdbc:h2:mem:employeeaccessdb'
+ 2023-10-23 07:53:36,042 [INFO] org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2023-10-23 07:53:36,049 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+ 2023-10-23 07:53:36,051 [WARN] org.hibernate.orm.deprecation [restartedMain] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+ 2023-10-23 07:53:36,107 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+ 2023-10-23 07:53:36,117 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 07:53:36,232 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+ 2023-10-23 07:53:36,327 [INFO] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+ 2023-10-23 07:53:36,349 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8082 (http) with context path ''
+ 2023-10-23 07:53:36,353 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplication [restartedMain] Started EmployeeaccessApplication in 0.725 seconds (process running for 25172.139)
+ 2023-10-23 07:53:36,354 [INFO] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+ 2023-10-23 07:53:45,066 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] Starting EmployeeaccessApplicationTests using Java 20.0.2 with PID 84260 (started by hp in D:\employeeaccess\employeeaccess)
+ 2023-10-23 07:53:45,070 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+ 2023-10-23 07:53:46,383 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2023-10-23 07:53:46,483 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 88 ms. Found 2 JPA repository interfaces.
+ 2023-10-23 07:53:47,753 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2023-10-23 07:53:47,927 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.2.13.Final
+ 2023-10-23 07:53:47,932 [INFO] org.hibernate.cfg.Environment [main] HHH000406: Using bytecode reflection optimizer
+ 2023-10-23 07:53:48,636 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+ 2023-10-23 07:53:48,688 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+ 2023-10-23 07:53:49,101 [INFO] com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:employeeaccessdb user=EMPACCESS
+ 2023-10-23 07:53:49,104 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+ 2023-10-23 07:53:49,169 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+ 2023-10-23 07:53:51,113 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+ 2023-10-23 07:53:51,295 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 07:53:52,608 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+ 2023-10-23 07:53:53,303 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [main] H2 console available at '/h2-ui'. Database available at 'jdbc:h2:mem:employeeaccessdb'
+ 2023-10-23 07:53:53,441 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] Started EmployeeaccessApplicationTests in 9.146 seconds (process running for 11.369)
+ 2023-10-23 07:53:54,948 [INFO] com.practicaltask.employeeaccess.controller.EmployeeController [main] Add New Employee Details API
+ 2023-10-23 07:53:54,958 [INFO] com.practicaltask.employeeaccess.controller.EmployeeController [main] Saved New Employee Details
+ 2023-10-23 07:53:55,040 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 07:53:55,046 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+ 2023-10-23 07:53:55,061 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+ 2023-10-23 07:56:34,511 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] Starting EmployeeaccessApplicationTests using Java 20.0.2 with PID 81828 (started by hp in D:\employeeaccess\employeeaccess)
+ 2023-10-23 07:56:34,514 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+ 2023-10-23 07:56:35,946 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2023-10-23 07:56:36,080 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 120 ms. Found 2 JPA repository interfaces.
+ 2023-10-23 07:56:37,622 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2023-10-23 07:56:37,796 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.2.13.Final
+ 2023-10-23 07:56:37,807 [INFO] org.hibernate.cfg.Environment [main] HHH000406: Using bytecode reflection optimizer
+ 2023-10-23 07:56:38,603 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+ 2023-10-23 07:56:38,665 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+ 2023-10-23 07:56:39,167 [INFO] com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:employeeaccessdb user=EMPACCESS
+ 2023-10-23 07:56:39,172 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+ 2023-10-23 07:56:39,237 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+ 2023-10-23 07:56:41,377 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+ 2023-10-23 07:56:41,517 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 07:56:43,017 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+ 2023-10-23 07:56:44,139 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [main] H2 console available at '/h2-ui'. Database available at 'jdbc:h2:mem:employeeaccessdb'
+ 2023-10-23 07:56:44,382 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] Started EmployeeaccessApplicationTests in 10.667 seconds (process running for 13.284)
+ 2023-10-23 07:56:46,228 [INFO] com.practicaltask.employeeaccess.controller.EmployeeController [main] Add New Employee Details API
+ 2023-10-23 07:56:46,396 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 07:56:46,404 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+ 2023-10-23 07:56:46,416 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+ 2023-10-23 08:02:06,381 [INFO] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
+ 2023-10-23 08:02:06,414 [INFO] org.apache.catalina.core.StandardService [Thread-60] Stopping service [Tomcat]
+ 2023-10-23 08:02:06,421 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-60] Closing JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 08:02:06,630 [WARN] org.springframework.beans.factory.support.DisposableBeanAdapter [Thread-60] Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+ 2023-10-23 08:02:06,630 [INFO] com.zaxxer.hikari.HikariDataSource [Thread-60] HikariPool-13 - Shutdown initiated...
+ 2023-10-23 08:02:06,632 [INFO] com.zaxxer.hikari.HikariDataSource [Thread-60] HikariPool-13 - Shutdown completed.
+ 2023-10-23 08:02:06,775 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplication [restartedMain] Starting EmployeeaccessApplication using Java 20.0.2 with PID 55656 (D:\employeeaccess\employeeaccess\target\classes started by hp in D:\employeeaccess\employeeaccess)
+ 2023-10-23 08:02:06,776 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+ 2023-10-23 08:02:07,004 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2023-10-23 08:02:07,022 [ERROR] org.springframework.boot.SpringApplication [restartedMain] Application run failed
+ java.lang.TypeNotPresentException: Type com.practicaltask.employeeaccess.entity.Employee not present
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125) ~[na:na]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138) ~[na:na]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
+	at java.base/sun.reflect.generics.repository.ClassRepository.computeSuperInterfaces(ClassRepository.java:117) ~[na:na]
+	at java.base/sun.reflect.generics.repository.ClassRepository.getSuperInterfaces(ClassRepository.java:95) ~[na:na]
+	at java.base/java.lang.Class.getGenericInterfaces(Class.java:1251) ~[na:na]
+	at org.springframework.core.ResolvableType.getInterfaces(ResolvableType.java:503) ~[spring-core-6.0.13.jar:6.0.13]
+	at org.springframework.core.ResolvableType.as(ResolvableType.java:451) ~[spring-core-6.0.13.jar:6.0.13]
+	at org.springframework.data.util.TypeDiscoverer.getSuperTypeInformation(TypeDiscoverer.java:250) ~[spring-data-commons-3.1.5.jar:3.1.5]
+	at org.springframework.data.util.ClassTypeInformation.getSuperTypeInformation(ClassTypeInformation.java:36) ~[spring-data-commons-3.1.5.jar:3.1.5]
+	at org.springframework.data.util.TypeInformation.getRequiredSuperTypeInformation(TypeInformation.java:327) ~[spring-data-commons-3.1.5.jar:3.1.5]
+	at org.springframework.data.repository.core.support.DefaultRepositoryMetadata.<init>(DefaultRepositoryMetadata.java:55) ~[spring-data-commons-3.1.5.jar:3.1.5]
+	at org.springframework.data.repository.core.support.AbstractRepositoryMetadata.getMetadata(AbstractRepositoryMetadata.java:77) ~[spring-data-commons-3.1.5.jar:3.1.5]
+	at org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.getRepositoryConfigurations(RepositoryConfigurationExtensionSupport.java:91) ~[spring-data-commons-3.1.5.jar:3.1.5]
+	at org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:163) ~[spring-data-commons-3.1.5.jar:3.1.5]
+	at org.springframework.data.repository.config.RepositoryBeanDefinitionRegistrarSupport.registerBeanDefinitions(RepositoryBeanDefinitionRegistrarSupport.java:94) ~[spring-data-commons-3.1.5.jar:3.1.5]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromRegistrars$1(ConfigurationClassBeanDefinitionReader.java:372) ~[spring-context-6.0.13.jar:6.0.13]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:729) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromRegistrars(ConfigurationClassBeanDefinitionReader.java:371) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:148) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:427) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:287) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:344) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:115) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:779) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:597) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-3.1.5.jar:3.1.5]
+	at com.practicaltask.employeeaccess.EmployeeaccessApplication.main(EmployeeaccessApplication.java:19) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.1.5.jar:3.1.5]
+Caused by: java.lang.ClassNotFoundException: com.practicaltask.employeeaccess.entity.Employee
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:496) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:475) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121) ~[spring-boot-devtools-3.1.5.jar:3.1.5]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:496) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:475) ~[na:na]
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114) ~[na:na]
+	... 39 common frames omitted
+2023-10-23 08:02:18,788 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+ 2023-10-23 08:02:18,789 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+ 2023-10-23 08:02:18,798 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplication [restartedMain] Starting EmployeeaccessApplication using Java 20.0.2 with PID 55656 (D:\employeeaccess\employeeaccess\target\classes started by hp in D:\employeeaccess\employeeaccess)
+ 2023-10-23 08:02:18,798 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+ 2023-10-23 08:02:18,994 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2023-10-23 08:02:19,008 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 13 ms. Found 2 JPA repository interfaces.
+ 2023-10-23 08:02:19,298 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8082 (http)
+ 2023-10-23 08:02:19,298 [INFO] org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+ 2023-10-23 08:02:19,298 [INFO] org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.15]
+ 2023-10-23 08:02:19,337 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+ 2023-10-23 08:02:19,337 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 536 ms
+ 2023-10-23 08:02:19,350 [INFO] com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-14 - Starting...
+ 2023-10-23 08:02:19,353 [INFO] com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-14 - Added connection conn161: url=jdbc:h2:mem:employeeaccessdb user=EMPACCESS
+ 2023-10-23 08:02:19,354 [INFO] com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-14 - Start completed.
+ 2023-10-23 08:02:19,354 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-ui'. Database available at 'jdbc:h2:mem:employeeaccessdb'
+ 2023-10-23 08:02:19,390 [INFO] org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2023-10-23 08:02:19,400 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+ 2023-10-23 08:02:19,402 [WARN] org.hibernate.orm.deprecation [restartedMain] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+ 2023-10-23 08:02:19,469 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+ 2023-10-23 08:02:19,484 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 08:02:19,617 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+ 2023-10-23 08:02:19,867 [INFO] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+ 2023-10-23 08:02:19,882 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8082 (http) with context path ''
+ 2023-10-23 08:02:19,886 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplication [restartedMain] Started EmployeeaccessApplication in 1.135 seconds (process running for 25695.672)
+ 2023-10-23 08:02:19,887 [INFO] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+ 2023-10-23 08:03:05,136 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] Starting EmployeeaccessApplicationTests using Java 20.0.2 with PID 84412 (started by hp in D:\employeeaccess\employeeaccess)
+ 2023-10-23 08:03:05,143 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+ 2023-10-23 08:03:06,999 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2023-10-23 08:03:07,098 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 84 ms. Found 2 JPA repository interfaces.
+ 2023-10-23 08:03:08,687 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2023-10-23 08:03:08,834 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.2.13.Final
+ 2023-10-23 08:03:08,840 [INFO] org.hibernate.cfg.Environment [main] HHH000406: Using bytecode reflection optimizer
+ 2023-10-23 08:03:09,604 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+ 2023-10-23 08:03:09,663 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+ 2023-10-23 08:03:10,138 [INFO] com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:employeeaccessdb user=EMPACCESS
+ 2023-10-23 08:03:10,141 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+ 2023-10-23 08:03:10,203 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+ 2023-10-23 08:03:12,076 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+ 2023-10-23 08:03:12,227 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 08:03:13,559 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+ 2023-10-23 08:03:14,392 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [main] H2 console available at '/h2-ui'. Database available at 'jdbc:h2:mem:employeeaccessdb'
+ 2023-10-23 08:03:14,556 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] Started EmployeeaccessApplicationTests in 10.562 seconds (process running for 12.955)
+ 2023-10-23 08:03:16,708 [INFO] com.practicaltask.employeeaccess.controller.EmployeeController [main] Get All Employee API
+ 2023-10-23 08:03:16,716 [INFO] com.practicaltask.employeeaccess.controller.EmployeeController [main] Getting All Employee List
+ 2023-10-23 08:03:16,847 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 08:03:16,852 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+ 2023-10-23 08:03:16,884 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+ 2023-10-23 08:04:25,391 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] Starting EmployeeaccessApplicationTests using Java 20.0.2 with PID 84188 (started by hp in D:\employeeaccess\employeeaccess)
+ 2023-10-23 08:04:25,393 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+ 2023-10-23 08:04:26,386 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2023-10-23 08:04:26,475 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 74 ms. Found 2 JPA repository interfaces.
+ 2023-10-23 08:04:27,747 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2023-10-23 08:04:27,873 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.2.13.Final
+ 2023-10-23 08:04:27,879 [INFO] org.hibernate.cfg.Environment [main] HHH000406: Using bytecode reflection optimizer
+ 2023-10-23 08:04:28,622 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+ 2023-10-23 08:04:28,682 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+ 2023-10-23 08:04:29,198 [INFO] com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:employeeaccessdb user=EMPACCESS
+ 2023-10-23 08:04:29,250 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+ 2023-10-23 08:04:29,379 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+ 2023-10-23 08:04:31,740 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+ 2023-10-23 08:04:31,860 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 08:04:33,143 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+ 2023-10-23 08:04:33,870 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [main] H2 console available at '/h2-ui'. Database available at 'jdbc:h2:mem:employeeaccessdb'
+ 2023-10-23 08:04:34,011 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] Started EmployeeaccessApplicationTests in 9.348 seconds (process running for 11.387)
+ 2023-10-23 08:04:35,567 [INFO] com.practicaltask.employeeaccess.controller.EmployeeController [main] Get All Employee API
+ 2023-10-23 08:04:35,663 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 08:04:35,670 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+ 2023-10-23 08:04:35,677 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+ 2023-10-23 08:08:07,358 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] Starting EmployeeaccessApplicationTests using Java 20.0.2 with PID 70760 (started by hp in D:\employeeaccess\employeeaccess)
+ 2023-10-23 08:08:07,362 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+ 2023-10-23 08:08:08,784 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2023-10-23 08:08:08,888 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 86 ms. Found 2 JPA repository interfaces.
+ 2023-10-23 08:08:10,336 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2023-10-23 08:08:10,468 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.2.13.Final
+ 2023-10-23 08:08:10,473 [INFO] org.hibernate.cfg.Environment [main] HHH000406: Using bytecode reflection optimizer
+ 2023-10-23 08:08:11,211 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+ 2023-10-23 08:08:11,276 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+ 2023-10-23 08:08:11,932 [INFO] com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:employeeaccessdb user=EMPACCESS
+ 2023-10-23 08:08:11,936 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+ 2023-10-23 08:08:12,019 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+ 2023-10-23 08:08:14,145 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+ 2023-10-23 08:08:14,290 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 08:08:15,707 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+ 2023-10-23 08:08:16,525 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [main] H2 console available at '/h2-ui'. Database available at 'jdbc:h2:mem:employeeaccessdb'
+ 2023-10-23 08:08:16,682 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] Started EmployeeaccessApplicationTests in 10.183 seconds (process running for 12.725)
+ 2023-10-23 08:08:18,391 [INFO] com.practicaltask.employeeaccess.controller.EmployeeController [main] Get Employee Based On Employee ID API
+ 2023-10-23 08:08:18,513 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 08:08:18,522 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+ 2023-10-23 08:08:18,530 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+ 2023-10-23 08:08:46,640 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] Starting EmployeeaccessApplicationTests using Java 20.0.2 with PID 12400 (started by hp in D:\employeeaccess\employeeaccess)
+ 2023-10-23 08:08:46,642 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+ 2023-10-23 08:08:47,785 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2023-10-23 08:08:47,898 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 98 ms. Found 2 JPA repository interfaces.
+ 2023-10-23 08:08:49,471 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2023-10-23 08:08:49,629 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.2.13.Final
+ 2023-10-23 08:08:49,637 [INFO] org.hibernate.cfg.Environment [main] HHH000406: Using bytecode reflection optimizer
+ 2023-10-23 08:08:50,453 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+ 2023-10-23 08:08:50,513 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+ 2023-10-23 08:08:50,954 [INFO] com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:employeeaccessdb user=EMPACCESS
+ 2023-10-23 08:08:50,956 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+ 2023-10-23 08:08:51,008 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+ 2023-10-23 08:08:53,075 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+ 2023-10-23 08:08:53,235 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 08:08:55,099 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+ 2023-10-23 08:08:55,998 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [main] H2 console available at '/h2-ui'. Database available at 'jdbc:h2:mem:employeeaccessdb'
+ 2023-10-23 08:08:56,213 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] Started EmployeeaccessApplicationTests in 10.344 seconds (process running for 12.754)
+ 2023-10-23 08:08:58,077 [INFO] com.practicaltask.employeeaccess.controller.EmployeeController [main] Get Employee Based On Employee ID API
+ 2023-10-23 08:08:58,183 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 08:08:58,195 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+ 2023-10-23 08:08:58,206 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+ 2023-10-23 08:10:58,940 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] Starting EmployeeaccessApplicationTests using Java 20.0.2 with PID 86864 (started by hp in D:\employeeaccess\employeeaccess)
+ 2023-10-23 08:10:58,942 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+ 2023-10-23 08:11:00,330 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2023-10-23 08:11:00,457 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 104 ms. Found 2 JPA repository interfaces.
+ 2023-10-23 08:11:02,010 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2023-10-23 08:11:02,168 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.2.13.Final
+ 2023-10-23 08:11:02,173 [INFO] org.hibernate.cfg.Environment [main] HHH000406: Using bytecode reflection optimizer
+ 2023-10-23 08:11:02,957 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+ 2023-10-23 08:11:03,014 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+ 2023-10-23 08:11:03,503 [INFO] com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:employeeaccessdb user=EMPACCESS
+ 2023-10-23 08:11:03,507 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+ 2023-10-23 08:11:03,572 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+ 2023-10-23 08:11:05,479 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+ 2023-10-23 08:11:05,612 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 08:11:07,235 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+ 2023-10-23 08:11:08,095 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [main] H2 console available at '/h2-ui'. Database available at 'jdbc:h2:mem:employeeaccessdb'
+ 2023-10-23 08:11:08,249 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] Started EmployeeaccessApplicationTests in 10.062 seconds (process running for 12.536)
+ 2023-10-23 08:11:09,975 [INFO] com.practicaltask.employeeaccess.controller.EmployeeController [main] Get Employee Based On Employee ID API
+ 2023-10-23 08:11:10,083 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 08:11:10,092 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+ 2023-10-23 08:11:10,100 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+ 2023-10-23 08:11:57,611 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] Starting EmployeeaccessApplicationTests using Java 20.0.2 with PID 74584 (started by hp in D:\employeeaccess\employeeaccess)
+ 2023-10-23 08:11:57,613 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+ 2023-10-23 08:11:59,050 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2023-10-23 08:11:59,187 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 115 ms. Found 2 JPA repository interfaces.
+ 2023-10-23 08:12:01,168 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2023-10-23 08:12:01,329 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.2.13.Final
+ 2023-10-23 08:12:01,352 [INFO] org.hibernate.cfg.Environment [main] HHH000406: Using bytecode reflection optimizer
+ 2023-10-23 08:12:02,203 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+ 2023-10-23 08:12:02,271 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+ 2023-10-23 08:12:02,792 [INFO] com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:employeeaccessdb user=EMPACCESS
+ 2023-10-23 08:12:02,797 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+ 2023-10-23 08:12:02,864 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+ 2023-10-23 08:12:05,260 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+ 2023-10-23 08:12:05,414 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 08:12:07,097 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+ 2023-10-23 08:12:07,969 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [main] H2 console available at '/h2-ui'. Database available at 'jdbc:h2:mem:employeeaccessdb'
+ 2023-10-23 08:12:08,155 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] Started EmployeeaccessApplicationTests in 11.581 seconds (process running for 14.386)
+ 2023-10-23 08:12:09,710 [INFO] com.practicaltask.employeeaccess.controller.EmployeeController [main] Get Employee Based On Employee ID API
+ 2023-10-23 08:12:49,245 [WARN] com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46s332ms879µs200ns).
+ 2023-10-23 08:12:49,351 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 08:12:49,354 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+ 2023-10-23 08:12:49,370 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+ 2023-10-23 08:13:16,025 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] Starting EmployeeaccessApplicationTests using Java 20.0.2 with PID 81188 (started by hp in D:\employeeaccess\employeeaccess)
+ 2023-10-23 08:13:16,028 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+ 2023-10-23 08:13:17,450 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2023-10-23 08:13:17,622 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 146 ms. Found 2 JPA repository interfaces.
+ 2023-10-23 08:13:19,582 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2023-10-23 08:13:19,769 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.2.13.Final
+ 2023-10-23 08:13:19,782 [INFO] org.hibernate.cfg.Environment [main] HHH000406: Using bytecode reflection optimizer
+ 2023-10-23 08:13:20,833 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+ 2023-10-23 08:13:20,904 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+ 2023-10-23 08:13:21,445 [INFO] com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:employeeaccessdb user=EMPACCESS
+ 2023-10-23 08:13:21,449 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+ 2023-10-23 08:13:21,521 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+ 2023-10-23 08:13:24,166 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+ 2023-10-23 08:13:24,372 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 08:13:25,922 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+ 2023-10-23 08:13:27,161 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [main] H2 console available at '/h2-ui'. Database available at 'jdbc:h2:mem:employeeaccessdb'
+ 2023-10-23 08:13:27,392 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] Started EmployeeaccessApplicationTests in 12.46 seconds (process running for 15.182)
+ 2023-10-23 08:13:29,171 [INFO] com.practicaltask.employeeaccess.controller.EmployeeController [main] Get Employee Based On Employee ID API
+ 2023-10-23 08:14:31,975 [WARN] com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m10s418ms670µs600ns).
+ 2023-10-23 08:14:32,032 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 08:14:32,055 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 08:14:32,061 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+ 2023-10-23 08:14:32,070 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+ 2023-10-23 08:14:32,382 [WARN] org.springframework.beans.factory.support.DisposableBeanAdapter [SpringApplicationShutdownHook] Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+ 2023-10-23 08:14:32,383 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-14 - Shutdown initiated...
+ 2023-10-23 08:14:32,530 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-14 - Shutdown completed.
+ 2023-10-23 08:14:58,285 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] Starting EmployeeaccessApplicationTests using Java 20.0.2 with PID 64048 (started by hp in D:\employeeaccess\employeeaccess)
+ 2023-10-23 08:14:58,287 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+ 2023-10-23 08:14:59,606 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2023-10-23 08:14:59,732 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 106 ms. Found 2 JPA repository interfaces.
+ 2023-10-23 08:15:01,504 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2023-10-23 08:15:01,690 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.2.13.Final
+ 2023-10-23 08:15:01,695 [INFO] org.hibernate.cfg.Environment [main] HHH000406: Using bytecode reflection optimizer
+ 2023-10-23 08:15:02,619 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+ 2023-10-23 08:15:02,713 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+ 2023-10-23 08:15:03,290 [INFO] com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:employeeaccessdb user=EMPACCESS
+ 2023-10-23 08:15:03,294 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+ 2023-10-23 08:15:03,364 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+ 2023-10-23 08:15:05,537 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+ 2023-10-23 08:15:05,725 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 08:15:07,346 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+ 2023-10-23 08:15:08,680 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [main] H2 console available at '/h2-ui'. Database available at 'jdbc:h2:mem:employeeaccessdb'
+ 2023-10-23 08:15:08,871 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] Started EmployeeaccessApplicationTests in 11.464 seconds (process running for 14.347)
+ 2023-10-23 08:15:10,552 [INFO] com.practicaltask.employeeaccess.controller.EmployeeController [main] Add New Employee Details API
+ 2023-10-23 08:15:22,040 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 08:15:22,044 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+ 2023-10-23 08:15:22,056 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+ 2023-10-23 08:22:28,477 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] Starting EmployeeaccessApplicationTests using Java 20.0.2 with PID 36488 (started by hp in D:\employeeaccess\employeeaccess)
+ 2023-10-23 08:22:28,480 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+ 2023-10-23 08:22:29,656 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2023-10-23 08:22:29,755 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 84 ms. Found 2 JPA repository interfaces.
+ 2023-10-23 08:22:31,265 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2023-10-23 08:22:31,410 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.2.13.Final
+ 2023-10-23 08:22:31,415 [INFO] org.hibernate.cfg.Environment [main] HHH000406: Using bytecode reflection optimizer
+ 2023-10-23 08:22:32,163 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+ 2023-10-23 08:22:32,298 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+ 2023-10-23 08:22:32,975 [INFO] com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:employeeaccessdb user=EMPACCESS
+ 2023-10-23 08:22:32,978 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+ 2023-10-23 08:22:33,028 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+ 2023-10-23 08:22:35,027 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+ 2023-10-23 08:22:35,164 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 08:22:36,608 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+ 2023-10-23 08:22:37,709 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [main] H2 console available at '/h2-ui'. Database available at 'jdbc:h2:mem:employeeaccessdb'
+ 2023-10-23 08:22:37,865 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] Started EmployeeaccessApplicationTests in 10.138 seconds (process running for 12.644)
+ 2023-10-23 08:22:39,526 [INFO] com.practicaltask.employeeaccess.controller.EmployeeController [main] Delete Employee Details Based On ID API
+ 2023-10-23 08:22:39,759 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 08:22:39,763 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+ 2023-10-23 08:22:39,774 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+ 2023-10-23 08:23:04,784 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] Starting EmployeeaccessApplicationTests using Java 20.0.2 with PID 87636 (started by hp in D:\employeeaccess\employeeaccess)
+ 2023-10-23 08:23:04,786 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+ 2023-10-23 08:23:06,227 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2023-10-23 08:23:06,359 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 109 ms. Found 2 JPA repository interfaces.
+ 2023-10-23 08:23:07,900 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2023-10-23 08:23:08,097 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.2.13.Final
+ 2023-10-23 08:23:08,105 [INFO] org.hibernate.cfg.Environment [main] HHH000406: Using bytecode reflection optimizer
+ 2023-10-23 08:23:09,714 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+ 2023-10-23 08:23:09,787 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+ 2023-10-23 08:23:10,275 [INFO] com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:employeeaccessdb user=EMPACCESS
+ 2023-10-23 08:23:10,280 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+ 2023-10-23 08:23:10,352 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+ 2023-10-23 08:23:12,393 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+ 2023-10-23 08:23:12,552 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 08:23:13,959 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+ 2023-10-23 08:23:15,058 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [main] H2 console available at '/h2-ui'. Database available at 'jdbc:h2:mem:employeeaccessdb'
+ 2023-10-23 08:23:15,248 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] Started EmployeeaccessApplicationTests in 11.475 seconds (process running for 14.401)
+ 2023-10-23 08:23:16,631 [INFO] com.practicaltask.employeeaccess.controller.EmployeeController [main] Delete Employee Details Based On ID API
+ 2023-10-23 08:23:41,909 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 08:23:41,918 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+ 2023-10-23 08:23:41,943 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+ 2023-10-23 08:23:46,745 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] Starting EmployeeaccessApplicationTests using Java 20.0.2 with PID 68780 (started by hp in D:\employeeaccess\employeeaccess)
+ 2023-10-23 08:23:46,747 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+ 2023-10-23 08:23:47,896 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2023-10-23 08:23:48,001 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 91 ms. Found 2 JPA repository interfaces.
+ 2023-10-23 08:23:49,493 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2023-10-23 08:23:49,651 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.2.13.Final
+ 2023-10-23 08:23:49,660 [INFO] org.hibernate.cfg.Environment [main] HHH000406: Using bytecode reflection optimizer
+ 2023-10-23 08:23:50,679 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+ 2023-10-23 08:23:50,782 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+ 2023-10-23 08:23:51,327 [INFO] com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:employeeaccessdb user=EMPACCESS
+ 2023-10-23 08:23:51,331 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+ 2023-10-23 08:23:51,408 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+ 2023-10-23 08:23:53,436 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+ 2023-10-23 08:23:53,574 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 08:23:54,907 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+ 2023-10-23 08:23:55,710 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [main] H2 console available at '/h2-ui'. Database available at 'jdbc:h2:mem:employeeaccessdb'
+ 2023-10-23 08:23:55,874 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] Started EmployeeaccessApplicationTests in 9.97 seconds (process running for 12.361)
+ 2023-10-23 08:23:57,617 [INFO] com.practicaltask.employeeaccess.controller.EmployeeController [main] Delete Employee Details Based On ID API
+ 2023-10-23 08:23:58,252 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 08:23:58,257 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+ 2023-10-23 08:23:58,285 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+ 2023-10-23 08:28:50,179 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] Starting EmployeeaccessApplicationTests using Java 20.0.2 with PID 80480 (started by hp in D:\employeeaccess\employeeaccess)
+ 2023-10-23 08:28:50,182 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+ 2023-10-23 08:28:51,604 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2023-10-23 08:28:51,738 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 113 ms. Found 2 JPA repository interfaces.
+ 2023-10-23 08:28:53,496 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2023-10-23 08:28:53,683 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.2.13.Final
+ 2023-10-23 08:28:53,692 [INFO] org.hibernate.cfg.Environment [main] HHH000406: Using bytecode reflection optimizer
+ 2023-10-23 08:28:54,637 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+ 2023-10-23 08:28:54,713 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+ 2023-10-23 08:28:55,232 [INFO] com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:employeeaccessdb user=EMPACCESS
+ 2023-10-23 08:28:55,236 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+ 2023-10-23 08:28:55,313 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+ 2023-10-23 08:28:57,876 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+ 2023-10-23 08:28:58,058 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 08:28:59,704 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+ 2023-10-23 08:29:00,786 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [main] H2 console available at '/h2-ui'. Database available at 'jdbc:h2:mem:employeeaccessdb'
+ 2023-10-23 08:29:00,975 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] Started EmployeeaccessApplicationTests in 11.774 seconds (process running for 14.88)
+ 2023-10-23 08:29:12,370 [INFO] com.practicaltask.employeeaccess.controller.ModuleController [main] Get All Modules Details API
+ 2023-10-23 08:29:20,989 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 08:29:20,998 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+ 2023-10-23 08:29:21,005 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+ 2023-10-23 08:32:21,187 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] Starting EmployeeaccessApplicationTests using Java 20.0.2 with PID 69428 (started by hp in D:\employeeaccess\employeeaccess)
+ 2023-10-23 08:32:21,191 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+ 2023-10-23 08:32:22,917 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2023-10-23 08:32:23,049 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 109 ms. Found 2 JPA repository interfaces.
+ 2023-10-23 08:32:24,790 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2023-10-23 08:32:25,075 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.2.13.Final
+ 2023-10-23 08:32:25,088 [INFO] org.hibernate.cfg.Environment [main] HHH000406: Using bytecode reflection optimizer
+ 2023-10-23 08:32:25,985 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+ 2023-10-23 08:32:26,053 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+ 2023-10-23 08:32:26,662 [INFO] com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:employeeaccessdb user=EMPACCESS
+ 2023-10-23 08:32:26,667 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+ 2023-10-23 08:32:26,735 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+ 2023-10-23 08:32:29,482 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+ 2023-10-23 08:32:29,656 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 08:32:31,445 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+ 2023-10-23 08:32:32,332 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [main] H2 console available at '/h2-ui'. Database available at 'jdbc:h2:mem:employeeaccessdb'
+ 2023-10-23 08:32:32,560 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] Started EmployeeaccessApplicationTests in 12.351 seconds (process running for 15.112)
+ 2023-10-23 08:32:36,431 [INFO] com.practicaltask.employeeaccess.controller.ModuleController [main] Get All Modules Details API
+ 2023-10-23 08:32:51,427 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 08:32:51,434 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+ 2023-10-23 08:32:51,442 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+ 2023-10-23 08:36:02,395 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] Starting EmployeeaccessApplicationTests using Java 20.0.2 with PID 60024 (started by hp in D:\employeeaccess\employeeaccess)
+ 2023-10-23 08:36:02,397 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+ 2023-10-23 08:36:03,581 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2023-10-23 08:36:03,674 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 76 ms. Found 2 JPA repository interfaces.
+ 2023-10-23 08:36:04,907 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2023-10-23 08:36:05,039 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.2.13.Final
+ 2023-10-23 08:36:05,044 [INFO] org.hibernate.cfg.Environment [main] HHH000406: Using bytecode reflection optimizer
+ 2023-10-23 08:36:05,748 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+ 2023-10-23 08:36:05,810 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+ 2023-10-23 08:36:06,237 [INFO] com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:employeeaccessdb user=EMPACCESS
+ 2023-10-23 08:36:06,240 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+ 2023-10-23 08:36:06,292 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+ 2023-10-23 08:36:08,155 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+ 2023-10-23 08:36:08,287 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 08:36:09,728 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+ 2023-10-23 08:36:10,618 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [main] H2 console available at '/h2-ui'. Database available at 'jdbc:h2:mem:employeeaccessdb'
+ 2023-10-23 08:36:10,914 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] Started EmployeeaccessApplicationTests in 9.316 seconds (process running for 11.475)
+ 2023-10-23 08:36:13,079 [INFO] com.practicaltask.employeeaccess.controller.ModuleController [main] Allow Module Access To Employee API
+ 2023-10-23 08:36:13,170 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 08:36:13,178 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+ 2023-10-23 08:36:13,184 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+ 2023-10-23 08:37:02,794 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] Starting EmployeeaccessApplicationTests using Java 20.0.2 with PID 82792 (started by hp in D:\employeeaccess\employeeaccess)
+ 2023-10-23 08:37:02,796 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+ 2023-10-23 08:37:03,785 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2023-10-23 08:37:03,882 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 82 ms. Found 2 JPA repository interfaces.
+ 2023-10-23 08:37:05,147 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2023-10-23 08:37:05,281 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.2.13.Final
+ 2023-10-23 08:37:05,286 [INFO] org.hibernate.cfg.Environment [main] HHH000406: Using bytecode reflection optimizer
+ 2023-10-23 08:37:05,968 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+ 2023-10-23 08:37:06,023 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+ 2023-10-23 08:37:06,448 [INFO] com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:employeeaccessdb user=EMPACCESS
+ 2023-10-23 08:37:06,452 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+ 2023-10-23 08:37:06,499 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+ 2023-10-23 08:37:08,219 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+ 2023-10-23 08:37:08,319 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 08:37:09,456 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+ 2023-10-23 08:37:10,207 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [main] H2 console available at '/h2-ui'. Database available at 'jdbc:h2:mem:employeeaccessdb'
+ 2023-10-23 08:37:10,344 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] Started EmployeeaccessApplicationTests in 8.388 seconds (process running for 10.519)
+ 2023-10-23 08:37:12,062 [INFO] com.practicaltask.employeeaccess.controller.ModuleController [main] Allow Module Access To Employee API
+ 2023-10-23 08:37:12,230 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 08:37:12,234 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+ 2023-10-23 08:37:12,312 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+ 2023-10-23 08:38:09,172 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] Starting EmployeeaccessApplicationTests using Java 20.0.2 with PID 86588 (started by hp in D:\employeeaccess\employeeaccess)
+ 2023-10-23 08:38:09,174 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+ 2023-10-23 08:38:10,244 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2023-10-23 08:38:10,343 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 84 ms. Found 2 JPA repository interfaces.
+ 2023-10-23 08:38:11,592 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2023-10-23 08:38:11,720 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.2.13.Final
+ 2023-10-23 08:38:11,725 [INFO] org.hibernate.cfg.Environment [main] HHH000406: Using bytecode reflection optimizer
+ 2023-10-23 08:38:12,453 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+ 2023-10-23 08:38:12,500 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+ 2023-10-23 08:38:12,922 [INFO] com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:employeeaccessdb user=EMPACCESS
+ 2023-10-23 08:38:12,924 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+ 2023-10-23 08:38:12,970 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+ 2023-10-23 08:38:14,730 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+ 2023-10-23 08:38:14,860 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 08:38:16,372 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+ 2023-10-23 08:38:17,064 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [main] H2 console available at '/h2-ui'. Database available at 'jdbc:h2:mem:employeeaccessdb'
+ 2023-10-23 08:38:17,203 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] Started EmployeeaccessApplicationTests in 8.731 seconds (process running for 10.757)
+ 2023-10-23 08:38:18,931 [INFO] com.practicaltask.employeeaccess.controller.ModuleController [main] Allow Module Access To Employee API
+ 2023-10-23 08:38:19,070 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 08:38:19,076 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+ 2023-10-23 08:38:19,089 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+ 2023-10-23 08:40:48,064 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] Starting EmployeeaccessApplicationTests using Java 20.0.2 with PID 81700 (started by hp in D:\employeeaccess\employeeaccess)
+ 2023-10-23 08:40:48,067 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+ 2023-10-23 08:40:49,744 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2023-10-23 08:40:49,888 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 120 ms. Found 2 JPA repository interfaces.
+ 2023-10-23 08:40:51,795 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2023-10-23 08:40:51,991 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.2.13.Final
+ 2023-10-23 08:40:51,997 [INFO] org.hibernate.cfg.Environment [main] HHH000406: Using bytecode reflection optimizer
+ 2023-10-23 08:40:53,143 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+ 2023-10-23 08:40:53,233 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+ 2023-10-23 08:40:53,849 [INFO] com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:employeeaccessdb user=EMPACCESS
+ 2023-10-23 08:40:53,858 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+ 2023-10-23 08:40:53,947 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+ 2023-10-23 08:40:57,129 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+ 2023-10-23 08:40:57,341 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 08:40:59,373 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+ 2023-10-23 08:41:00,618 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [main] H2 console available at '/h2-ui'. Database available at 'jdbc:h2:mem:employeeaccessdb'
+ 2023-10-23 08:41:00,840 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] Started EmployeeaccessApplicationTests in 13.96 seconds (process running for 17.319)
+ 2023-10-23 08:41:02,900 [INFO] com.practicaltask.employeeaccess.controller.ModuleController [main] Get All Employee Information Associate With Specific Module ID API
+ 2023-10-23 08:41:14,291 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 08:41:14,301 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+ 2023-10-23 08:41:14,307 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+ 2023-10-23 08:43:29,979 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] Starting EmployeeaccessApplicationTests using Java 20.0.2 with PID 85148 (started by hp in D:\employeeaccess\employeeaccess)
+ 2023-10-23 08:43:29,981 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+ 2023-10-23 08:43:31,106 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2023-10-23 08:43:31,225 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 104 ms. Found 2 JPA repository interfaces.
+ 2023-10-23 08:43:32,701 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2023-10-23 08:43:32,866 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.2.13.Final
+ 2023-10-23 08:43:32,875 [INFO] org.hibernate.cfg.Environment [main] HHH000406: Using bytecode reflection optimizer
+ 2023-10-23 08:43:33,676 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+ 2023-10-23 08:43:33,730 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+ 2023-10-23 08:43:34,268 [INFO] com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:employeeaccessdb user=EMPACCESS
+ 2023-10-23 08:43:34,274 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+ 2023-10-23 08:43:34,337 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+ 2023-10-23 08:43:36,289 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+ 2023-10-23 08:43:36,423 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 08:43:37,788 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+ 2023-10-23 08:43:38,688 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [main] H2 console available at '/h2-ui'. Database available at 'jdbc:h2:mem:employeeaccessdb'
+ 2023-10-23 08:43:38,877 [INFO] com.practicaltask.employeeaccess.EmployeeaccessApplicationTests [main] Started EmployeeaccessApplicationTests in 9.709 seconds (process running for 12.149)
+ 2023-10-23 08:43:40,682 [INFO] com.practicaltask.employeeaccess.controller.ModuleController [main] Remove Access Of Specific Module From Employee API
+ 2023-10-23 08:43:40,801 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+ 2023-10-23 08:43:40,805 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+ 2023-10-23 08:43:40,815 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
  

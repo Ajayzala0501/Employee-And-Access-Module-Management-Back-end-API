@@ -13,6 +13,7 @@ import java.util.Set;
 @NoArgsConstructor
 @ToString
 @Table(name = "employee")
+@Builder
 public class Employee {
 
     @Id
@@ -26,8 +27,17 @@ public class Employee {
     @Column(name = "lastName")
     private String lastName;
 
+    public Employee(long id, String firstName, String lastName, String department) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.department = department;
+    }
+
     @Column(name = "department")
     private String department;
+
+
 
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinTable(name = "employee_module_mapping",joinColumns = @JoinColumn(name = "employee_id",referencedColumnName = "id"),
